@@ -8,7 +8,9 @@ public class Gymnast extends Athlete {
 
 
     public Gymnast(int pointsA, int pointsB){
+//        , AthleteLog logger
        super (pointsA, pointsB);
+//        this.logger = logger;
     }
 
     public int calculatePoints(){

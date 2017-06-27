@@ -11,18 +11,20 @@ public abstract class Athlete {
     protected int pointsA;
     protected int pointsB;
     protected String medalColour;
+//    protected AthleteLog logger;
 
 
     abstract int calculatePoints();
+//    this method will change (be overriden) in sub-classes hence abstract nature (moved up with protected variables)
 
     public Athlete(int pointsA, int pointsB){
         this.pointsA = pointsA;
         this.pointsB = pointsB;
     }
 
-
+// below methods will not change in sub-classes hence public nature.
     public void prepare(){
-        System.out.println("I'm getting ready!");
+        System.out.println("I'm getting ready...");
     }
 
     public void compete(){
@@ -31,6 +33,7 @@ public abstract class Athlete {
 
     public void awardMedal(int total){
         this.medalColour = Medal.medalAward(total);
+        System.out.println("I only went and won " + this.medalColour);
     }
 
     public void enterEvent(){
@@ -38,13 +41,13 @@ public abstract class Athlete {
         compete();
         int total = calculatePoints();
         awardMedal(total);
+        System.out.println();
     }
 
     public String getMedalColour() {
         return medalColour;
     }
 
-//blah blah
 
 }
 

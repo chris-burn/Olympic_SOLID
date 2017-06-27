@@ -7,7 +7,9 @@ package com.example.user.olympicssolid;
 public class Boxer extends Athlete {
 
     public Boxer(int pointsA, int pointsB){
+//        , AthleteLog logger
         super (pointsA, pointsB);
+//        this.logger = logger;
     }
 
     public int calculatePoints(){
@@ -15,10 +17,14 @@ public class Boxer extends Athlete {
         return totalPoints;
     }
 
-
-
-
-
+//    public int calculatePoints() throws NullPointerException {
+//        if (int totalPoints == null) {
+//            throw NullPointerException("Can't Award for a null value");
+//        }
+//        {int totalPoints = pointsA - pointsB;
+//            return totalPoints;
+//        }
+//    }
 
 
 }
